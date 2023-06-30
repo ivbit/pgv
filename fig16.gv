@@ -1,0 +1,18 @@
+digraph "" {
+	graph [rankdir=TB];
+	node [shape=box];
+	a -> b	[label="1 day, 22:10:23", penwidth=2.2882783354190668];
+	b -> c	[label="1 day, 4:45:08", penwidth=1.6948260403630833];
+	b -> d	[label="1 day, 0:44:48", penwidth=1.5583741214488316];
+	d -> e	[label="8:21:20", penwidth=1.0];
+	d -> g	[label="4 days, 5:22:35", penwidth=4.168816667573507];
+	e -> f	[label="1 day, 6:51:20", penwidth=1.7664774918206916];
+	g -> e	[label="23:00:30", penwidth=1.4991566381918702];
+	g -> h	[label="21:34:02", penwidth=1.4500642279750091];
+	f -> g	[label="5 days, 5:46:33", penwidth=5.0];
+	f -> h	[label="4 days, 3:03:30", penwidth=4.089850560545807];
+}
+
+// dot -Tpng fig16.gv -o graph.png
+// xdot fig16.gv
+

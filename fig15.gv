@@ -1,0 +1,20 @@
+graph "" {
+	graph [rankdir=LR];
+	node [shape=circle];
+	u1 -- a	[label=1, penwidth=1.0];
+	u1 -- c	[label=1, penwidth=1.0];
+	u1 -- h	[label=1, penwidth=1.0];
+	u2 -- a	[label=2, penwidth=5.0];
+	u2 -- h	[label=1, penwidth=1.0];
+	u3 -- b	[label=2, penwidth=5.0];
+	u4 -- b	[label=1, penwidth=1.0];
+	u5 -- d	[label=1, penwidth=1.0];
+	u6 -- d	[label=1, penwidth=1.0];
+	u6 -- g	[label=2, penwidth=5.0];
+	u7 -- e	[label=2, penwidth=5.0];
+	u8 -- f	[label=2, penwidth=5.0];
+}
+
+// dot -Tpng fig15.gv -o graph.png
+// xdot fig15.gv
+

@@ -1,0 +1,34 @@
+digraph "" {
+    graph [rankdir=LR];
+    node [label="\N", shape=box];
+    a	[fillcolor=gray0, fontcolor=white, label="a
+(3)", style=filled];
+    b	[fillcolor=gray0, fontcolor=white, label="b
+(3)", style=filled];
+    a -> b	[label=3, penwidth=5.0];
+    c	[fillcolor=gray100, fontcolor=black, label="c
+(1)", style=filled];
+    b -> c	[label=1, penwidth=1.0];
+    d	[fillcolor=gray50, fontcolor=white, label="d
+(2)", style=filled];
+    b -> d	[label=2, penwidth=3.0];
+    e	[fillcolor=gray50, fontcolor=white, label="e
+(2)", style=filled];
+    d -> e	[label=1, penwidth=1.0];
+    g	[fillcolor=gray50, fontcolor=white, label="g
+(2)", style=filled];
+    d -> g	[label=1, penwidth=1.0];
+    f	[fillcolor=gray50, fontcolor=white, label="f
+(2)", style=filled];
+    e -> f	[label=2, penwidth=3.0];
+    f -> g	[label=1, penwidth=1.0];
+    h	[fillcolor=gray50, fontcolor=white, label="h
+(2)", style=filled];
+    f -> h	[label=1, penwidth=1.0];
+    g -> e	[label=1, penwidth=1.0];
+    g -> h	[label=1, penwidth=1.0];
+}
+
+// dot -Tpng fig09.gv -o graph.png
+// xdot fig09.gv
+

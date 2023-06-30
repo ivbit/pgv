@@ -1,0 +1,18 @@
+digraph "" {
+	graph [rankdir=LR];
+	node [shape=box];
+	a -> b	[label=3, penwidth=5.0];
+	b -> c	[label=1, penwidth=1.0];
+	b -> d	[label=2, penwidth=3.0];
+	d -> e	[label=1, penwidth=1.0];
+	d -> g	[label=1, penwidth=1.0];
+	e -> f	[label=2, penwidth=3.0];
+	g -> e	[label=1, penwidth=1.0];
+	g -> h	[label=1, penwidth=1.0];
+	f -> g	[label=1, penwidth=1.0];
+	f -> h	[label=1, penwidth=1.0];
+}
+
+// dot -Tpng fig06.gv -o graph.png
+// xdot fig06.gv
+
