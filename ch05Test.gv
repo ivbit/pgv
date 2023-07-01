@@ -1,0 +1,198 @@
+digraph "" {
+	graph [rankdir=LR];
+	node [label="\N", shape=box];
+	A_SUBMITTED	[fillcolor=gray72, fontcolor=black, label="A_SUBMITTED
+(13087)", style=filled];
+	A_PARTLYSUBMITTED	[fillcolor=gray72, fontcolor=black, label="A_PARTLYSUBMITTED
+(13087)", style=filled];
+	A_SUBMITTED -> A_PARTLYSUBMITTED	[label=13087, penwidth=2.586422185179573];
+	A_PREACCEPTED	[fillcolor=gray84, fontcolor=black, label="A_PREACCEPTED
+(7367)", style=filled];
+	A_PARTLYSUBMITTED -> A_PREACCEPTED	[label=4852, penwidth=1.5880891044097591];
+	A_DECLINED	[fillcolor=gray84, fontcolor=black,
+		label="A_DECLINED
+(7635)", style=filled];
+	A_PARTLYSUBMITTED -> A_DECLINED	[label=3429, penwidth=1.4155781178966511];
+	"W_Afhandelen leads"	[fillcolor=gray69, fontcolor=black, label="W_Afhandelen leads
+(14933)", style=filled];
+	A_PARTLYSUBMITTED -> "W_Afhandelen leads"	[label=4739, penwidth=1.5743900590998636];
+	"W_Beoordelen fraude"	[fillcolor=gray98, fontcolor=black, label="W_Beoordelen fraude
+(660)", style=filled];
+	A_PARTLYSUBMITTED -> "W_Beoordelen fraude"	[label=67, penwidth=1.0080012123048947];
+	"W_Completeren aanvraag"	[fillcolor=gray0, fontcolor=white, label="W_Completeren aanvraag
+(48374)", style=filled];
+	A_PREACCEPTED -> "W_Completeren aanvraag"	[label=7304, penwidth=1.8853462645855432];
+	A_ACCEPTED	[fillcolor=gray89, fontcolor=black, label="A_ACCEPTED
+(5113)", style=filled];
+	A_PREACCEPTED -> A_ACCEPTED	[label=43, penwidth=1.0050916805576602];
+	A_PREACCEPTED -> A_DECLINED	[label=14, penwidth=1.0015759963630853];
+	A_CANCELLED	[fillcolor=gray94, fontcolor=black, label="A_CANCELLED
+(2807)", style=filled];
+	A_PREACCEPTED -> A_CANCELLED	[label=6, penwidth=1.0006061524473404];
+	"W_Completeren aanvraag" -> "W_Completeren aanvraag"	[label=32996, penwidth=5.0];
+	"W_Completeren aanvraag" -> A_ACCEPTED	[label=5006, penwidth=1.6067585997878466];
+	O_SELECTED	[fillcolor=gray85, fontcolor=black, label="O_SELECTED
+(7031)", style=filled];
+	"W_Completeren aanvraag" -> O_SELECTED	[label=33, penwidth=1.0038793756629791];
+	A_FINALIZED	[fillcolor=gray89, fontcolor=black, label="A_FINALIZED
+(5015)", style=filled];
+	"W_Completeren aanvraag" -> A_FINALIZED	[label=19, penwidth=1.0021821488104259];
+	"W_Nabellen offertes"	[fillcolor=gray7, fontcolor=white, label="W_Nabellen offertes
+(44703)", style=filled];
+	"W_Completeren aanvraag" -> "W_Nabellen offertes"	[label=4185, penwidth=1.5072283679345355];
+	O_SENT_BACK	[fillcolor=gray92, fontcolor=black, label="O_SENT_BACK
+(3454)", style=filled];
+	"W_Completeren aanvraag" -> O_SENT_BACK	[label=64, penwidth=1.0076375208364903];
+	O_CANCELLED	[fillcolor=gray92, fontcolor=black, label="O_CANCELLED
+(3655)", style=filled];
+	"W_Completeren aanvraag" -> O_CANCELLED	[label=16, penwidth=1.0018184573420215];
+	"W_Completeren aanvraag" -> A_DECLINED	[label=1045, penwidth=1.1265646310046977];
+	"W_Completeren aanvraag" -> A_CANCELLED	[label=1113, penwidth=1.1348083042885286];
+	"W_Completeren aanvraag" -> "W_Afhandelen leads"	[label=2177, penwidth=1.2637975450825882];
+	O_DECLINED	[fillcolor=gray98, fontcolor=black, label="O_DECLINED
+(802)", style=filled];
+	"W_Completeren aanvraag" -> O_DECLINED	[label=1, penwidth=1.0];
+	"W_Completeren aanvraag" -> "W_Beoordelen fraude"	[label=7, penwidth=1.0007273829368086];
+	A_ACCEPTED -> "W_Completeren aanvraag"	[label=69, penwidth=1.008243673283831];
+	A_ACCEPTED -> O_SELECTED	[label=2881, penwidth=1.3491438096681314];
+	A_ACCEPTED -> A_FINALIZED	[label=2089, penwidth=1.2531292620093955];
+	A_ACCEPTED -> A_DECLINED	[label=26, penwidth=1.0030307622367025];
+	A_ACCEPTED -> A_CANCELLED	[label=48, penwidth=1.0056978330050008];
+	O_SELECTED -> O_SELECTED	[label=1, penwidth=1.0];
+	O_SELECTED -> A_FINALIZED	[label=2907, penwidth=1.3522958023943021];
+	O_CREATED	[fillcolor=gray85, fontcolor=black, label="O_CREATED
+(7030)", style=filled];
+	O_SELECTED -> O_CREATED	[label=3148, penwidth=1.3815123503561146];
+	O_SELECTED -> "W_Nabellen offertes"	[label=1, penwidth=1.0];
+	O_SELECTED -> O_CANCELLED	[label=974, penwidth=1.1179572662524624];
+	A_FINALIZED -> O_SELECTED	[label=2108, penwidth=1.2554326413092893];
+	A_FINALIZED -> O_CREATED	[label=2907, penwidth=1.3522958023943021];
+	O_SENT	[fillcolor=gray85, fontcolor=black, label="O_SENT
+(7030)", style=filled];
+	O_CREATED -> O_SENT	[label=7030, penwidth=1.8521291104712834];
+	O_SENT -> "W_Completeren aanvraag"	[label=1, penwidth=1.0];
+	O_SENT -> O_SELECTED	[label=73, penwidth=1.0087285952417033];
+	O_SENT -> "W_Nabellen offertes"	[label=6413, penwidth=1.777329898469465];
+	O_SENT -> O_SENT_BACK	[label=49, penwidth=1.0058190634944688];
+	O_SENT -> O_CANCELLED	[label=91, penwidth=1.0109107440521292];
+	"W_Wijzigen contractgegevens"	[fillcolor=gray100, fontcolor=black, label="W_Wijzigen contractgegevens
+(11)", style=filled];
+	O_SENT -> "W_Wijzigen contractgegevens"	[label=1, penwidth=1.0];
+	O_SENT -> A_DECLINED	[label=1, penwidth=1.0];
+	O_SENT -> A_CANCELLED	[label=6, penwidth=1.0006061524473404];
+	"W_Nabellen incomplete dossiers"	[fillcolor=gray51, fontcolor=black, label="W_Nabellen incomplete dossiers
+(23230)", style=filled];
+	O_SENT -> "W_Nabellen incomplete dossiers"	[label=395, penwidth=1.0477648128504318];
+	"W_Nabellen offertes" -> "W_Completeren aanvraag"	[label=4281, penwidth=1.5188664949234734];
+	"W_Nabellen offertes" -> O_SELECTED	[label=689, penwidth=1.0834065767540537];
+	"W_Nabellen offertes" -> O_CREATED	[label=1, penwidth=1.0];
+	"W_Nabellen offertes" -> "W_Nabellen offertes"	[label=30311, penwidth=4.674496135778148];
+	"W_Nabellen offertes" -> O_SENT_BACK	[label=3141, penwidth=1.3806637369298378];
+	"W_Valideren aanvraag"	[fillcolor=gray58, fontcolor=black, label="W_Valideren aanvraag
+(20190)", style=filled];
+	"W_Nabellen offertes" -> "W_Valideren aanvraag"	[label=2858, penwidth=1.3463555084103653];
+	"W_Nabellen offertes" -> O_CANCELLED	[label=1447, penwidth=1.1752992877708743];
+	"W_Nabellen offertes" -> A_DECLINED	[label=26, penwidth=1.0030307622367025];
+	"W_Nabellen offertes" -> A_CANCELLED	[label=777, penwidth=1.0940748598272465];
+	"W_Nabellen offertes" -> O_DECLINED	[label=20, penwidth=1.0023033792998939];
+	O_SENT_BACK -> "W_Valideren aanvraag"	[label=3452, penwidth=1.4183664191544174];
+	O_SENT_BACK -> O_CANCELLED	[label=1, penwidth=1.0];
+	O_SENT_BACK -> A_CANCELLED	[label=1, penwidth=1.0];
+	"W_Valideren aanvraag" -> O_SELECTED	[label=111, penwidth=1.013335353841491];
+	"W_Valideren aanvraag" -> "W_Nabellen offertes"	[label=2905, penwidth=1.352053341415366];
+	"W_Valideren aanvraag" -> "W_Valideren aanvraag"	[label=5815, penwidth=1.7048340657675405];
+	A_REGISTERED	[fillcolor=gray95, fontcolor=black, label="A_REGISTERED
+(2246)", style=filled];
+	"W_Valideren aanvraag" -> A_REGISTERED	[label=228, penwidth=1.027519321109259];
+	A_APPROVED	[fillcolor=gray95, fontcolor=black, label="A_APPROVED
+(2246)", style=filled];
+	"W_Valideren aanvraag" -> A_APPROVED	[label=489, penwidth=1.0591604788604334];
+	O_ACCEPTED	[fillcolor=gray95, fontcolor=black, label="O_ACCEPTED
+(2243)", style=filled];
+	"W_Valideren aanvraag" -> O_ACCEPTED	[label=1136, penwidth=1.137596605546295];
+	A_ACTIVATED	[fillcolor=gray95, fontcolor=black, label="A_ACTIVATED
+(2246)", style=filled];
+	"W_Valideren aanvraag" -> A_ACTIVATED	[label=198, penwidth=1.0238824064252159];
+	"W_Valideren aanvraag" -> O_CANCELLED	[label=111, penwidth=1.013335353841491];
+	"W_Valideren aanvraag" -> "W_Wijzigen contractgegevens"	[label=4, penwidth=1.0003636914684042];
+	"W_Valideren aanvraag" -> A_DECLINED	[label=320, penwidth=1.0386725261403242];
+	"W_Valideren aanvraag" -> A_CANCELLED	[label=12, penwidth=1.001333535384149];
+	"W_Valideren aanvraag" -> O_DECLINED	[label=348, penwidth=1.0420669798454312];
+	"W_Valideren aanvraag" -> "W_Nabellen incomplete dossiers"	[label=5674, penwidth=1.6877405667525383];
+	"W_Valideren aanvraag" -> "W_Beoordelen fraude"	[label=93, penwidth=1.0111532050310652];
+	A_REGISTERED -> "W_Valideren aanvraag"	[label=604, penwidth=1.0731019851492651];
+	A_REGISTERED -> A_APPROVED	[label=581, penwidth=1.0703136838914986];
+	A_REGISTERED -> O_ACCEPTED	[label=332, penwidth=1.0401272920139415];
+	A_REGISTERED -> A_ACTIVATED	[label=670, penwidth=1.0811031974541598];
+	A_REGISTERED -> "W_Nabellen incomplete dossiers"	[label=58, penwidth=1.0069101378996819];
+	A_APPROVED -> "W_Valideren aanvraag"	[label=275, penwidth=1.0332171541142596];
+	A_APPROVED -> A_REGISTERED	[label=682, penwidth=1.0825579633277769];
+	A_APPROVED -> O_ACCEPTED	[label=474, penwidth=1.057342021518412];
+	A_APPROVED -> A_ACTIVATED	[label=789, penwidth=1.0955296257008638];
+	A_APPROVED -> "W_Nabellen incomplete dossiers"	[label=26, penwidth=1.0030307622367025];
+	O_ACCEPTED -> "W_Valideren aanvraag"	[label=230, penwidth=1.0277617820881952];
+	O_ACCEPTED -> A_REGISTERED	[label=771, penwidth=1.0933474768904379];
+	O_ACCEPTED -> A_APPROVED	[label=654, penwidth=1.0791635096226702];
+	O_ACCEPTED -> A_ACTIVATED	[label=566, penwidth=1.0684952265494772];
+	O_ACCEPTED -> "W_Nabellen incomplete dossiers"	[label=22, penwidth=1.00254584027883];
+	A_ACTIVATED -> "W_Valideren aanvraag"	[label=941, penwidth=1.113956660100015];
+	A_ACTIVATED -> A_REGISTERED	[label=546, penwidth=1.0660706167601153];
+	A_ACTIVATED -> A_APPROVED	[label=478, penwidth=1.0578269434762844];
+	A_ACTIVATED -> O_ACCEPTED	[label=192, penwidth=1.0231550234884073];
+	A_ACTIVATED -> "W_Nabellen incomplete dossiers"	[label=88, penwidth=1.0105470525837248];
+	O_CANCELLED -> O_SELECTED	[label=1041, penwidth=1.1260797090468253];
+	O_CANCELLED -> O_CREATED	[label=974, penwidth=1.1179572662524624];
+	O_CANCELLED -> "W_Nabellen offertes"	[label=438, penwidth=1.0529777238975602];
+	O_CANCELLED -> "W_Valideren aanvraag"	[label=12, penwidth=1.001333535384149];
+	O_CANCELLED -> A_CANCELLED	[label=767, penwidth=1.0928625549325655];
+	O_CANCELLED -> "W_Nabellen incomplete dossiers"	[label=67, penwidth=1.0080012123048947];
+	"W_Wijzigen contractgegevens" -> "W_Nabellen offertes"	[label=1, penwidth=1.0];
+	"W_Wijzigen contractgegevens" -> "W_Valideren aanvraag"	[label=1, penwidth=1.0];
+	"W_Wijzigen contractgegevens" -> "W_Wijzigen contractgegevens"	[label=5, penwidth=1.0004849219578724];
+	A_DECLINED -> "W_Completeren aanvraag"	[label=979, penwidth=1.118563418699803];
+	A_DECLINED -> "W_Nabellen offertes"	[label=18, penwidth=1.0020609183209577];
+	A_DECLINED -> "W_Valideren aanvraag"	[label=348, penwidth=1.0420669798454312];
+	A_DECLINED -> "W_Afhandelen leads"	[label=1919, penwidth=1.232520078799818];
+	A_DECLINED -> O_DECLINED	[label=383, penwidth=1.0463100469768147];
+	A_DECLINED -> "W_Nabellen incomplete dossiers"	[label=50, penwidth=1.005940293983937];
+	A_DECLINED -> "W_Beoordelen fraude"	[label=57, penwidth=1.0067889074102137];
+	A_CANCELLED -> "W_Completeren aanvraag"	[label=657, penwidth=1.0795272010910744];
+	A_CANCELLED -> "W_Nabellen offertes"	[label=407, penwidth=1.049219578724049];
+	A_CANCELLED -> "W_Valideren aanvraag"	[label=14, penwidth=1.0015759963630853];
+	A_CANCELLED -> O_CANCELLED	[label=866, penwidth=1.1048643733899075];
+	A_CANCELLED -> "W_Nabellen incomplete dossiers"	[label=54, penwidth=1.0064252159418094];
+	"W_Afhandelen leads" -> A_PREACCEPTED	[label=2514, penwidth=1.3046522200333384];
+	"W_Afhandelen leads" -> "W_Completeren aanvraag"	[label=2081, penwidth=1.2521594180936506];
+	"W_Afhandelen leads" -> A_ACCEPTED	[label=64, penwidth=1.0076375208364903];
+	"W_Afhandelen leads" -> A_DECLINED	[label=2262, penwidth=1.2741021366873768];
+	"W_Afhandelen leads" -> A_CANCELLED	[label=5, penwidth=1.0004849219578724];
+	"W_Afhandelen leads" -> "W_Afhandelen leads"	[label=6021, penwidth=1.7298075465979694];
+	"W_Afhandelen leads" -> "W_Beoordelen fraude"	[label=67, penwidth=1.0080012123048947];
+	O_DECLINED -> "W_Nabellen offertes"	[label=24, penwidth=1.0027883012577663];
+	O_DECLINED -> "W_Valideren aanvraag"	[label=319, penwidth=1.0385512956508562];
+	O_DECLINED -> A_DECLINED	[label=419, penwidth=1.0506743445976663];
+	O_DECLINED -> "W_Nabellen incomplete dossiers"	[label=33, penwidth=1.0038793756629791];
+	"W_Nabellen incomplete dossiers" -> O_SELECTED	[label=94, penwidth=1.0112744355205334];
+	"W_Nabellen incomplete dossiers" -> O_SENT_BACK	[label=200, penwidth=1.024124867404152];
+	"W_Nabellen incomplete dossiers" -> "W_Valideren aanvraag"	[label=5228, penwidth=1.6336717684497652];
+	"W_Nabellen incomplete dossiers" -> A_REGISTERED	[label=19, penwidth=1.0021821488104259];
+	"W_Nabellen incomplete dossiers" -> A_APPROVED	[label=44, penwidth=1.0052129110471284];
+	"W_Nabellen incomplete dossiers" -> O_ACCEPTED	[label=109, penwidth=1.0130928928625549];
+	"W_Nabellen incomplete dossiers" -> A_ACTIVATED	[label=23, penwidth=1.0026670707682983];
+	"W_Nabellen incomplete dossiers" -> O_CANCELLED	[label=149, penwidth=1.017942112441279];
+	"W_Nabellen incomplete dossiers" -> "W_Wijzigen contractgegevens"	[label=1, penwidth=1.0];
+	"W_Nabellen incomplete dossiers" -> A_DECLINED	[label=36, penwidth=1.0042430671313836];
+	"W_Nabellen incomplete dossiers" -> A_CANCELLED	[label=72, penwidth=1.0086073647522351];
+	"W_Nabellen incomplete dossiers" -> O_DECLINED	[label=50, penwidth=1.005940293983937];
+	"W_Nabellen incomplete dossiers" -> "W_Nabellen incomplete dossiers"	[label=16763, penwidth=3.0320654644643126];
+	"W_Beoordelen fraude" -> A_PREACCEPTED	[label=1, penwidth=1.0];
+	"W_Beoordelen fraude" -> "W_Completeren aanvraag"	[label=6, penwidth=1.0006061524473404];
+	"W_Beoordelen fraude" -> "W_Valideren aanvraag"	[label=93, penwidth=1.0111532050310652];
+	"W_Beoordelen fraude" -> A_DECLINED	[label=57, penwidth=1.0067889074102137];
+	"W_Beoordelen fraude" -> "W_Afhandelen leads"	[label=77, penwidth=1.0092135171995757];
+	"W_Beoordelen fraude" -> "W_Beoordelen fraude"	[label=369, penwidth=1.0446128201242613];
+}
+
+// dot -Tpng ch05Test.gv -o test.png
+// xdot ch05Test.gv
+
